@@ -99,6 +99,7 @@
 		6520FB751F95A835000804D2 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6520FB5F1F95A835000804D2 /* Icon-App-83.5x83.5@2x.png */; };
 		6520FB761F95A835000804D2 /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6520FB601F95A835000804D2 /* Icon-Small-50x50@1x.png */; };
 		6520FB771F95A835000804D2 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6520FB611F95A835000804D2 /* Icon-Small-50x50@2x.png */; };
+		6520FB791F95B14A000804D2 /* bg_table_poker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6520FB781F95B14A000804D2 /* bg_table_poker.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +197,7 @@
 		6520FB5F1F95A835000804D2 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png"; path = "images/icons/Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
 		6520FB601F95A835000804D2 /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@1x.png"; path = "images/icons/Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
 		6520FB611F95A835000804D2 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@2x.png"; path = "images/icons/Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
+		6520FB781F95B14A000804D2 /* bg_table_poker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_table_poker.png; path = images/misc/bg_table_poker.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +360,7 @@
 		6520FACB1F95A7AF000804D2 /* misc */ = {
 			isa = PBXGroup;
 			children = (
+				6520FB781F95B14A000804D2 /* bg_table_poker.png */,
 				6520FACC1F95A7F4000804D2 /* buttons.png */,
 				6520FACD1F95A7F4000804D2 /* logo_jeuPoker.png */,
 				6520FACE1F95A7F4000804D2 /* loto_presente.png */,
@@ -459,6 +462,7 @@
 				6520FB261F95A821000804D2 /* 4s.png in Resources */,
 				6520FB1D1F95A821000804D2 /* 2h.png in Resources */,
 				6520FAD01F95A7F4000804D2 /* logo_jeuPoker.png in Resources */,
+				6520FB791F95B14A000804D2 /* bg_table_poker.png in Resources */,
 				6520FB621F95A835000804D2 /* Icon-App-20x20@1x.png in Resources */,
 				6520FB451F95A821000804D2 /* 12h.png in Resources */,
 				6520FB741F95A835000804D2 /* Icon-App-76x76@3x.png in Resources */,
