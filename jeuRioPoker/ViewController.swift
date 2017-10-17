@@ -44,6 +44,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var creditsLabel: UILabel!
     @IBOutlet weak var betLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var bet25: UIButton!
+    @IBOutlet weak var bet100: UIButton!
+    @IBOutlet weak var betAll: UIButton!
     //---
     var arrOfCardImages: [UIImage]!
     //---
@@ -200,6 +203,8 @@ class ViewController: UIViewController {
                              selector: #selector(displayRandomCards),
                              userInfo: nil,
                              repeats: false)
+        //---
+        bet25.alpha = 0.5 // verificar - colocar if
     }
     //----------------------//----------------------
     @objc func displayRandomCards() {
@@ -221,12 +226,16 @@ class ViewController: UIViewController {
         if chances == 0 {
             permissionToSelectCards = false
             dealButton.alpha = 0.5
+            resetButton.alpha = 1 // Liberar o bouton chances = 0
             resetCards()
             createDeckOfCards()
             handToAnalyse = [(0, ""), (0, ""), (0, ""), (0, ""), (0, "")]
             chances = 2
             bet = 0
             betLabel.text = "MISE : 0"
+        }
+        if credits != 0 {
+            resetButton.alpha = 0.5 // Mantem o bouton travado credit != 0
         }
         //---
     }
@@ -352,7 +361,8 @@ class ViewController: UIViewController {
     //----------------------//----------------------
     @IBAction func betButtons(_ sender: UIButton) {
         //---
-        if chances <= 1 || credits == 0 { // verifier
+        //if chances <= 1 || credits == 0 { // verifier
+        if chances <= 1 {
             return
         }
         //---
@@ -385,9 +395,21 @@ class ViewController: UIViewController {
     //----------------------//----------------------
     
     @IBAction func resetJeu(_ sender: UIButton) {
-        resetCards()
-        resetBackOfCards()
+        //---
+        if sender.alpha == 0.5 {
+            return
+        }
+        credits = 2000
+        //bet = 0
+        creditsLabel.text = "CRÉDITS : 2000"
+        betLabel.text = "MISE : 0"
         prepareForNextHand()
+        resetBackOfCards()
+        resetButton.alpha = 0.5
+        bet25.alpha = 1
+        bet100.alpha = 1
+        betAll.alpha = 1
+        
     }
     //----------------------//----------------------
     func resetBackOfCards() {
