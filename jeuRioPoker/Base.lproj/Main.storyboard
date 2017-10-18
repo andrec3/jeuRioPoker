@@ -8,6 +8,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Taurus-Mono-Outline-Bold.otf">
+            <string>TaurusMonoOutline-Bold</string>
+        </array>
+        <array key="Taurus-Mono-Outline-Regular.otf">
+            <string>TaurusMonoOutline</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_table_poker.png" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-eM-kLT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_table_poker.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-eM-kLT">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -43,12 +51,12 @@
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GARDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKR-LM-CQm">
                                         <rect key="frame" x="3" y="170" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="TaurusMonoOutline-Bold" family="Taurus Mono Outline" pointSize="17"/>
+                                        <color key="textColor" red="0.26121851801872253" green="0.48259252309799194" blue="0.91870409250259399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.71273723820000001" green="0.2089685795" blue="0.059311062650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.5472997194" green="0.8236633578" blue="0.8293520942" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cir-QU-95D" userLabel="BG2">
                                 <rect key="frame" x="145" y="115" width="120" height="195"/>
@@ -68,8 +76,8 @@
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GARDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-kd-OBZ">
                                         <rect key="frame" x="0.0" y="170" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="TaurusMonoOutline-Bold" family="Taurus Mono Outline" pointSize="17"/>
+                                        <color key="textColor" red="0.26121851801872253" green="0.48259252309799194" blue="0.91870409250259399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -93,8 +101,8 @@
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GARDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtA-l5-dBS">
                                         <rect key="frame" x="0.0" y="170" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="TaurusMonoOutline-Bold" family="Taurus Mono Outline" pointSize="17"/>
+                                        <color key="textColor" red="0.26121851801872253" green="0.48259252309799194" blue="0.91870409250259399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -118,8 +126,8 @@
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GARDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7s-Xy-29e">
                                         <rect key="frame" x="0.0" y="170" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="TaurusMonoOutline-Bold" family="Taurus Mono Outline" pointSize="17"/>
+                                        <color key="textColor" red="0.26121851801872253" green="0.48259252309799194" blue="0.91870409250259399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -143,84 +151,93 @@
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GARDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwa-rN-JAj">
                                         <rect key="frame" x="0.0" y="170" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="TaurusMonoOutline-Bold" family="Taurus Mono Outline" pointSize="17"/>
+                                        <color key="textColor" red="0.26121851801872253" green="0.48259252309799194" blue="0.91870409250259399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5472997194" green="0.8236633578" blue="0.8293520942" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLF-f9-h5Q">
-                                <rect key="frame" x="17" y="318" width="121" height="49"/>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLF-f9-h5Q">
+                                <rect key="frame" x="17" y="318" width="120" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RECOMMENCER" backgroundImage="buttons.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="10"/>
+                                <state key="normal" title="RECOMMENCER" backgroundImage="bouton.png">
+                                    <color key="titleColor" red="0.98217857559999999" green="1" blue="0.62666481519999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="resetJeu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zhh-gJ-BpP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHL-BB-Fsy">
+                            <button opaque="NO" tag="25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHL-BB-Fsy">
                                 <rect key="frame" x="145" y="318" width="120" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MISER 25" backgroundImage="buttons.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                <state key="normal" title="MISER 25" backgroundImage="bouton.png">
+                                    <color key="titleColor" red="0.98217857559999999" green="1" blue="0.62666481519999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="betButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSn-XZ-3Gi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANN-M8-w8I">
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANN-M8-w8I">
                                 <rect key="frame" x="271" y="318" width="120" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MISER 100" backgroundImage="buttons.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                <state key="normal" title="MISER 100" backgroundImage="bouton.png">
+                                    <color key="titleColor" red="0.98217857559999999" green="1" blue="0.62666481519999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="betButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5N-26-3Q2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1000" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcp-nl-qwD">
+                            <button opaque="NO" tag="1000" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcp-nl-qwD">
                                 <rect key="frame" x="399" y="318" width="120" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MISER TOUT" backgroundImage="buttons.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                <state key="normal" title="MISER TOUT" backgroundImage="bouton.png">
+                                    <color key="titleColor" red="0.98217857559999999" green="1" blue="0.62666481519999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="betButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ShM-oA-J7L"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzP-Ae-3Dl">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzP-Ae-3Dl">
                                 <rect key="frame" x="527" y="318" width="120" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DISTRIBUER" backgroundImage="buttons.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="12"/>
+                                <state key="normal" title="DISTRIBUER" backgroundImage="bouton.png">
+                                    <color key="titleColor" red="0.98217857559999999" green="1" blue="0.62666481519999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5p-Oc-Dqu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CRÉDITS: 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-zI-MPe">
-                                <rect key="frame" x="20" y="9" width="163" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CRÉDITS: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-zI-MPe">
+                                <rect key="frame" x="20" y="16" width="208" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="TaurusMonoOutline" family="Taurus Mono Outline" pointSize="17"/>
+                                <color key="textColor" red="0.98217857559999999" green="1" blue="0.62666481519999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MISE : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKO-RL-r8g">
-                                <rect key="frame" x="20" y="38" width="163" height="21"/>
+                                <rect key="frame" x="20" y="38" width="208" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="TaurusMonoOutline" family="Taurus Mono Outline" pointSize="17"/>
+                                <color key="textColor" red="0.98217857559999999" green="1" blue="0.62666481519999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-9w-C96">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bonne chance!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-9w-C96">
                                 <rect key="frame" x="20" y="67" width="247" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="TaurusMonoOutline" family="Taurus Mono Outline" pointSize="17"/>
+                                <color key="textColor" red="0.98217857559999999" green="1" blue="0.62666481519999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carnaval.png" translatesAutoresizingMaskIntoConstraints="NO" id="6OB-Jk-SlR">
+                                <rect key="frame" x="375" y="0.0" width="226" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -257,7 +274,8 @@
     </scenes>
     <resources>
         <image name="back.png" width="202" height="280"/>
-        <image name="bg_table_poker.png" width="1472" height="848"/>
-        <image name="buttons.png" width="600" height="200"/>
+        <image name="bg_table_poker.jpg" width="2560" height="1600"/>
+        <image name="bouton.png" width="1964" height="926"/>
+        <image name="carnaval.png" width="667" height="375"/>
     </resources>
 </document>

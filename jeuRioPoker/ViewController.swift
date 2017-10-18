@@ -9,6 +9,7 @@
 
 //----------------------//----------------------
 import UIKit
+import AVFoundation
 //----------------------//----------------------
 class ViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
     //---
     var permissionToSelectCards = false
     var bet = 0
-    var credits = 2000
+    var credits = 0
     //---
     var chances = 2
     //---
@@ -69,10 +70,23 @@ class ViewController: UIViewController {
     var handToAnalyse = [(0, ""), (0, ""), (0, ""), (0, ""), (0, "")]
     //---
     var theHand = [(Int, String)]()
+    //---
+    var player: AVAudioPlayer?
+    //----------------------//----------------------
+    let userDef = UserDefaultsManager()
     //----------------------//----------------------
     override func viewDidLoad() {
         //---
+        initSound ()
+        verifyCredit()
         super.viewDidLoad()
+        //---
+        
+        
+        
+        //print(credits)
+        creditsLabel.text = "CRÉDITS : \(credits)"
+        
         //---
         createCardObjectsFromImages()
         //---
@@ -204,7 +218,7 @@ class ViewController: UIViewController {
                              userInfo: nil,
                              repeats: false)
         //---
-        bet25.alpha = 0.5 // verificar - colocar if
+        //bet25.alpha = 0.5 // verificar - colocar if
     }
     //----------------------//----------------------
     @objc func displayRandomCards() {
@@ -235,7 +249,8 @@ class ViewController: UIViewController {
             betLabel.text = "MISE : 0"
         }
         if credits != 0 {
-            resetButton.alpha = 0.5 // Mantem o bouton travado credit != 0
+            //resetButton.alpha = 0.5 // Mantem o bouton travado credit != 0
+            resetButton.isEnabled = false
         }
         //---
     }
@@ -324,6 +339,8 @@ class ViewController: UIViewController {
         credits += (times * bet)
         tempLabel.text = handToDisplay
         creditsLabel.text = "CRÉDITS: \(credits)"
+        //
+        userDef.setKey(theValue: credits as AnyObject, theKey: "credits")
     }
     //----------------------//----------------------
     @IBAction func cardsToHold(_ sender: UIButton) {
@@ -400,8 +417,7 @@ class ViewController: UIViewController {
             return
         }
         credits = 2000
-        //bet = 0
-        creditsLabel.text = "CRÉDITS : 2000"
+        creditsLabel.text = "CRÉDITS : \(credits)"
         betLabel.text = "MISE : 0"
         prepareForNextHand()
         resetBackOfCards()
@@ -431,5 +447,51 @@ class ViewController: UIViewController {
         //---
     }
     //----------------------//----------------------
+    func verifyCredit() {
+        // Verifier si le clé exist pas
+        if !userDef.doesKeyExist(theKey: "credits") {
+            userDef.setKey(theValue: credits as AnyObject, theKey: "credits")
+        } else {
+            // si exist
+            credits = userDef.getValue(theKey: "credits") as! Int
+        }
+        if credits == 0 {
+            zeroCredit()
+        }
+    }
+    //----------------------//----------------------
+    func zeroCredit() {
+        resetButton.alpha = 1
+        bet25.alpha = 0.5
+        bet100.alpha = 0.5
+        betAll.alpha = 0.5
+    }
+    
+    
+    
+
+    
+    //----------------------//----------------------
+    func initSound()
+    {
+        guard let urlPlay = Bundle.main.url(forResource: "play", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: urlPlay)
+            
+            //—- play sound
+            player?.play()
+            
+            //—- play sound
+            player?.stop()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 //----------------------//----------------------
+
