@@ -99,6 +99,8 @@
 		6520FB751F95A835000804D2 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6520FB5F1F95A835000804D2 /* Icon-App-83.5x83.5@2x.png */; };
 		6520FB761F95A835000804D2 /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6520FB601F95A835000804D2 /* Icon-Small-50x50@1x.png */; };
 		6520FB771F95A835000804D2 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6520FB611F95A835000804D2 /* Icon-Small-50x50@2x.png */; };
+		654CF0821F9830E000A33371 /* button_hint.wav in Resources */ = {isa = PBXBuildFile; fileRef = 654CF0811F9830E000A33371 /* button_hint.wav */; };
+		654CF0841F9843AD00A33371 /* pandeiro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 654CF0831F9843AD00A33371 /* pandeiro.wav */; };
 		9B6454561F977A08001A76E4 /* bg_table_poker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6454551F977A08001A76E4 /* bg_table_poker.jpg */; };
 		9B6454581F977E78001A76E4 /* bouton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6454571F977E78001A76E4 /* bouton.png */; };
 		9B64545D1F9783CC001A76E4 /* Reno Casino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B64545C1F9783CC001A76E4 /* Reno Casino.ttf */; };
@@ -204,6 +206,8 @@
 		6520FB5F1F95A835000804D2 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png"; path = "images/icons/Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
 		6520FB601F95A835000804D2 /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@1x.png"; path = "images/icons/Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
 		6520FB611F95A835000804D2 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@2x.png"; path = "images/icons/Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
+		654CF0811F9830E000A33371 /* button_hint.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = button_hint.wav; path = sounds/button_hint.wav; sourceTree = "<group>"; };
+		654CF0831F9843AD00A33371 /* pandeiro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = pandeiro.wav; path = sounds/pandeiro.wav; sourceTree = "<group>"; };
 		9B6454551F977A08001A76E4 /* bg_table_poker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg_table_poker.jpg; path = images/misc/bg_table_poker.jpg; sourceTree = "<group>"; };
 		9B6454571F977E78001A76E4 /* bouton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bouton.png; path = images/misc/bouton.png; sourceTree = "<group>"; };
 		9B64545C1F9783CC001A76E4 /* Reno Casino.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Reno Casino.ttf"; path = "fonts/Reno Casino.ttf"; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 		6520FAA91F959661000804D2 /* jeuRioPoker */ = {
 			isa = PBXGroup;
 			children = (
+				654CF07C1F98306F00A33371 /* sounds */,
 				9B6454591F9781CC001A76E4 /* fonts */,
 				6520FABE1F95A3C0000804D2 /* images */,
 				6520FABC1F959A2D000804D2 /* PokerHands.swift */,
@@ -387,6 +392,15 @@
 			name = misc;
 			sourceTree = "<group>";
 		};
+		654CF07C1F98306F00A33371 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				654CF0831F9843AD00A33371 /* pandeiro.wav */,
+				654CF0811F9830E000A33371 /* button_hint.wav */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
 		9B6454591F9781CC001A76E4 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +528,7 @@
 				6520FB281F95A821000804D2 /* 5d.png in Resources */,
 				6520FADD1F95A80C000804D2 /* flou4.png in Resources */,
 				6520FB6C1F95A835000804D2 /* Icon-App-57x57@2x.png in Resources */,
+				654CF0841F9843AD00A33371 /* pandeiro.wav in Resources */,
 				6520FAE11F95A80C000804D2 /* flou8.png in Resources */,
 				6520FB651F95A835000804D2 /* Icon-App-29x29@1x.png in Resources */,
 				6520FB241F95A821000804D2 /* 4d.png in Resources */,
@@ -523,6 +538,7 @@
 				6520FB421F95A821000804D2 /* 11s.png in Resources */,
 				6520FADC1F95A80C000804D2 /* flou3.png in Resources */,
 				6520FB361F95A821000804D2 /* 8s.png in Resources */,
+				654CF0821F9830E000A33371 /* button_hint.wav in Resources */,
 				6520FB2F1F95A821000804D2 /* 7c.png in Resources */,
 				6520FB2B1F95A821000804D2 /* 6c.png in Resources */,
 				9B6454581F977E78001A76E4 /* bouton.png in Resources */,

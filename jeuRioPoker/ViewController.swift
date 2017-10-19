@@ -71,22 +71,18 @@ class ViewController: UIViewController {
     //---
     var theHand = [(Int, String)]()
     //---
-    var player: AVAudioPlayer?
+    var sonButtonEffect: AVAudioPlayer?
+    //---
+    var sonCardsEffect: AVAudioPlayer?
     //----------------------//----------------------
     let userDef = UserDefaultsManager()
     //----------------------//----------------------
     override func viewDidLoad() {
         //---
-        initSound ()
         verifyCredit()
         super.viewDidLoad()
         //---
-        
-        
-        
-        //print(credits)
         creditsLabel.text = "CRÉDITS : \(credits)"
-        
         //---
         createCardObjectsFromImages()
         //---
@@ -187,6 +183,7 @@ class ViewController: UIViewController {
     }
     //----------------------//----------------------
     @IBAction func play(_ sender: UIButton) {
+        cardSon()
         //---
         if chances == 0 || dealButton.alpha == 0.5 {
             return
@@ -248,10 +245,13 @@ class ViewController: UIViewController {
             bet = 0
             betLabel.text = "MISE : 0"
         }
+        //---
         if credits != 0 {
-            //resetButton.alpha = 0.5 // Mantem o bouton travado credit != 0
-            resetButton.isEnabled = false
+            resetButton.alpha = 0.5 // Mantem o bouton travado credit != 0
+        } else if credits == 0 && bet == 0 {
+            zeroCredit()
         }
+
         //---
     }
     //----------------------//----------------------
@@ -378,6 +378,7 @@ class ViewController: UIViewController {
     //----------------------//----------------------
     @IBAction func betButtons(_ sender: UIButton) {
         //---
+        boutonSon()
         //if chances <= 1 || credits == 0 { // verifier
         if chances <= 1 {
             return
@@ -413,6 +414,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetJeu(_ sender: UIButton) {
         //---
+        
         if sender.alpha == 0.5 {
             return
         }
@@ -422,10 +424,11 @@ class ViewController: UIViewController {
         prepareForNextHand()
         resetBackOfCards()
         resetButton.alpha = 0.5
-        bet25.alpha = 1
-        bet100.alpha = 1
-        betAll.alpha = 1
-        
+        bet25.isEnabled = true
+        bet100.isEnabled = true
+        betAll.isEnabled = true
+        boutonSon()
+        userDef.setKey(theValue: credits as AnyObject, theKey: "credits")
     }
     //----------------------//----------------------
     func resetBackOfCards() {
@@ -455,6 +458,7 @@ class ViewController: UIViewController {
             // si exist
             credits = userDef.getValue(theKey: "credits") as! Int
         }
+        //---
         if credits == 0 {
             zeroCredit()
         }
@@ -462,36 +466,40 @@ class ViewController: UIViewController {
     //----------------------//----------------------
     func zeroCredit() {
         resetButton.alpha = 1
-        bet25.alpha = 0.5
-        bet100.alpha = 0.5
-        betAll.alpha = 0.5
+        bet25.isEnabled = false
+        bet100.isEnabled = false
+        betAll.isEnabled = false
     }
-    
-    
-    
-
-    
     //----------------------//----------------------
-    func initSound()
-    {
-        guard let urlPlay = Bundle.main.url(forResource: "play", withExtension: "mp3") else { return }
+    func boutonSon() {
+        let path = Bundle.main.path(forResource: "button_hint.wav", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            player = try AVAudioPlayer(contentsOf: urlPlay)
-            
-            //—- play sound
-            player?.play()
-            
-            //—- play sound
-            player?.stop()
-            
-        } catch let error {
-            print(error.localizedDescription)
+            sonButtonEffect = try AVAudioPlayer(contentsOf: url)
+            sonButtonEffect?.play()
+            sleep(1)
+            sonButtonEffect?.stop()
+        } catch {
+            // couldn't load file :(
         }
     }
+    //----------------------//----------------------
+    func cardSon() {
+        let path = Bundle.main.path(forResource: "pandeiro.wav", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            sonCardsEffect = try AVAudioPlayer(contentsOf: url)
+            sonCardsEffect?.play()
+            //sleep(2)
+            //sonCardsEffect?.stop()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+    //----------------------//----------------------
 }
-//----------------------//----------------------
 
+//----------------------//----------------------
+//Sound buton https://freesound.org/s/320181/
