@@ -101,6 +101,7 @@
 		6520FB771F95A835000804D2 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6520FB611F95A835000804D2 /* Icon-Small-50x50@2x.png */; };
 		654CF0821F9830E000A33371 /* button_hint.wav in Resources */ = {isa = PBXBuildFile; fileRef = 654CF0811F9830E000A33371 /* button_hint.wav */; };
 		654CF0841F9843AD00A33371 /* pandeiro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 654CF0831F9843AD00A33371 /* pandeiro.wav */; };
+		9B5B80621F9913BC0064529C /* Philadelphian-Gothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B5B80611F9913BC0064529C /* Philadelphian-Gothic.otf */; };
 		9B6454561F977A08001A76E4 /* bg_table_poker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6454551F977A08001A76E4 /* bg_table_poker.jpg */; };
 		9B6454581F977E78001A76E4 /* bouton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6454571F977E78001A76E4 /* bouton.png */; };
 		9B64545D1F9783CC001A76E4 /* Reno Casino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B64545C1F9783CC001A76E4 /* Reno Casino.ttf */; };
@@ -208,6 +209,7 @@
 		6520FB611F95A835000804D2 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@2x.png"; path = "images/icons/Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
 		654CF0811F9830E000A33371 /* button_hint.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = button_hint.wav; path = sounds/button_hint.wav; sourceTree = "<group>"; };
 		654CF0831F9843AD00A33371 /* pandeiro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = pandeiro.wav; path = sounds/pandeiro.wav; sourceTree = "<group>"; };
+		9B5B80611F9913BC0064529C /* Philadelphian-Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Philadelphian-Gothic.otf"; path = "fonts/philadelphian-gothic/Philadelphian-Gothic.otf"; sourceTree = "<group>"; };
 		9B6454551F977A08001A76E4 /* bg_table_poker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg_table_poker.jpg; path = images/misc/bg_table_poker.jpg; sourceTree = "<group>"; };
 		9B6454571F977E78001A76E4 /* bouton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bouton.png; path = images/misc/bouton.png; sourceTree = "<group>"; };
 		9B64545C1F9783CC001A76E4 /* Reno Casino.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Reno Casino.ttf"; path = "fonts/Reno Casino.ttf"; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 		9B6454591F9781CC001A76E4 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				9B5B80611F9913BC0064529C /* Philadelphian-Gothic.otf */,
 				9B6454641F9790CB001A76E4 /* Taurus-Mono-Outline-Bold.otf */,
 				9B64545E1F97841D001A76E4 /* Taurus-Mono-Outline-Regular.otf */,
 				9B64545C1F9783CC001A76E4 /* Reno Casino.ttf */,
@@ -493,6 +496,7 @@
 				6520FB3E1F95A821000804D2 /* 10s.png in Resources */,
 				6520FB6A1F95A835000804D2 /* Icon-App-40x40@3x.png in Resources */,
 				6520FB191F95A821000804D2 /* 1h.png in Resources */,
+				9B5B80621F9913BC0064529C /* Philadelphian-Gothic.otf in Resources */,
 				6520FB6F1F95A835000804D2 /* Icon-App-60x60@3x.png in Resources */,
 				9B64545D1F9783CC001A76E4 /* Reno Casino.ttf in Resources */,
 				6520FB6D1F95A835000804D2 /* Icon-App-60x60@1x.png in Resources */,
