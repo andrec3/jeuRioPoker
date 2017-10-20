@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     //---
     var permissionToSelectCards = false
     var bet = 0
-    var credits = 0
+    var credits = 2000
     //---
     var chances = 2
     //---
@@ -80,8 +80,9 @@ class ViewController: UIViewController {
     //----------------------//----------------------
     override func viewDidLoad() {
         //---
-        verifyCredit()
         super.viewDidLoad()
+        //---
+        verifyCredit()
         //---
         creditsLabel.text = "CRÉDITS : \(credits)"
         //---

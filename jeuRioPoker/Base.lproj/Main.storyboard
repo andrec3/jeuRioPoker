@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X7U-Ds-MsF">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X7U-Ds-MsF">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,27 +26,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_table_poker.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GcG-Vi-m8q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_table_poker.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GcG-Vi-m8q">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loto_presente.png" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-1I-fFJ">
                                 <rect key="frame" x="226" y="13" width="214" height="349"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPN-E2-BKu">
                                 <rect key="frame" x="260" y="179" width="145" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Philadelphian-Gothic" family="Philadelphian-Gothic" pointSize="14"/>
                                 <state key="normal" title="CONTINUEZ" backgroundImage="bouton.png">
                                     <color key="titleColor" red="0.98349767919999997" green="0.99150985479999998" blue="0.68490779400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="segue" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="ebp-KX-gZw"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="ebp-KX-gZw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GcG-Vi-m8q" firstAttribute="leading" secondItem="2ov-Xr-ATo" secondAttribute="leading" id="QWt-bI-Iwe"/>
+                            <constraint firstItem="VAC-B2-SGk" firstAttribute="top" secondItem="GcG-Vi-m8q" secondAttribute="bottom" id="UjT-qf-Esw"/>
+                            <constraint firstAttribute="trailing" secondItem="GcG-Vi-m8q" secondAttribute="trailing" id="W0o-VQ-3iB"/>
+                            <constraint firstItem="GcG-Vi-m8q" firstAttribute="top" secondItem="2ov-Xr-ATo" secondAttribute="top" id="ahA-VB-Yxm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="continuezButton" destination="sPN-E2-BKu" id="Bl4-pi-tpo"/>
@@ -69,9 +74,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_table_poker.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-eM-kLT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_table_poker.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-eM-kLT">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIc-uB-7Sw" userLabel="BG1">
                                 <rect key="frame" x="17" y="115" width="120" height="195"/>
@@ -280,6 +284,12 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kRO-eM-kLT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1J1-kd-v9M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kRO-eM-kLT" secondAttribute="bottom" id="Nf4-Ek-6BV"/>
+                            <constraint firstAttribute="trailing" secondItem="kRO-eM-kLT" secondAttribute="trailing" id="To1-XD-sNU"/>
+                            <constraint firstItem="kRO-eM-kLT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ftJ-1M-pp5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bet100" destination="ANN-M8-w8I" id="bsI-tg-BHF"/>
