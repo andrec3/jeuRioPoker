@@ -15,12 +15,14 @@ import AVFoundation
 class ViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
     //---
+    // Les cinq ImageViews (slots) pour montrer les cartes
     @IBOutlet weak var slot_1: UIImageView!
     @IBOutlet weak var slot_2: UIImageView!
     @IBOutlet weak var slot_3: UIImageView!
     @IBOutlet weak var slot_4: UIImageView!
     @IBOutlet weak var slot_5: UIImageView!
     //---
+    // Les variables qui représentent les huit images flou pour faire l'animation
     var card_flou_1: UIImage!
     var card_flou_2: UIImage!
     var card_flou_3: UIImage!
@@ -30,41 +32,44 @@ class ViewController: UIViewController {
     var card_flou_7: UIImage!
     var card_flou_8: UIImage!
     //---
+    // Les View qui contiennent une ImageView pour voir la carte, un bouton pour cliquer (faire la selection) et un label pour montrer Garder
     @IBOutlet weak var bg_1: UIView!
     @IBOutlet weak var bg_2: UIView!
     @IBOutlet weak var bg_3: UIView!
     @IBOutlet weak var bg_4: UIView!
     @IBOutlet weak var bg_5: UIView!
     //---
+    // Les connexions vers les Labels qui sont hidden
     @IBOutlet weak var keep_1: UILabel!
     @IBOutlet weak var keep_2: UILabel!
     @IBOutlet weak var keep_3: UILabel!
     @IBOutlet weak var keep_4: UILabel!
     @IBOutlet weak var keep_5: UILabel!
     //---
-    @IBOutlet weak var dealButton: UIButton!
-    @IBOutlet weak var creditsLabel: UILabel!
-    @IBOutlet weak var betLabel: UILabel!
-    @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var bet25: UIButton!
+    
+    @IBOutlet weak var dealButton: UIButton!  // Le connexion ver les boutons miser
+    @IBOutlet weak var creditsLabel: UILabel! // Le Label pour le credit
+    @IBOutlet weak var betLabel: UILabel!     // Le Label pour le bet
+    @IBOutlet weak var resetButton: UIButton! // Le bouton pour recommencer le jeu quand le credit est zero
+    @IBOutlet weak var bet25: UIButton!       // Les boutons bet pour faire l'interaction
     @IBOutlet weak var bet100: UIButton!
     @IBOutlet weak var betAll: UIButton!
     //---
-    var arrOfCardImages: [UIImage]!
+    var arrOfCardImages: [UIImage]!         // Le tableau pour les images
     //---
-    var arrOfSlotImageViews: [UIImageView]!
+    var arrOfSlotImageViews: [UIImageView]! // Le tableau pour les ImagesViews
     //---
-    var deckOfCards = [(Int, String)]()
+    var deckOfCards = [(Int, String)]()     // Le tableau pour creer le jeu des cartes
     //---
-    var arrOfBackgrounds: [UIView]!
+    var arrOfBackgrounds: [UIView]!         // Le tableau pour les backgrouds
     //---
-    var arrOfKeepLabels: [UILabel]!
+    var arrOfKeepLabels: [UILabel]!         // Le tableau pour les keeplabels
     //---
-    var permissionToSelectCards = false
+    var permissionToSelectCards = false // Variable créée pour empêcher a certain moment qui les cartes soient choisis
     var bet = 0
     var credits = 2000
     //---
-    var chances = 2
+    var chances = 2  // La variable qui gère le numero des chances d'utilisateur
     //---
     let pokerHands = PokerHands()
     //---
@@ -72,23 +77,23 @@ class ViewController: UIViewController {
     //---
     var theHand = [(Int, String)]()
     //---
-    var sonButtonEffect: AVAudioPlayer?
+    var sonButtonEffect: AVAudioPlayer?  // La variable pour l'effet sonore du bouton
     //---
-    var sonCardsEffect: AVAudioPlayer?
+    var sonCardsEffect: AVAudioPlayer?  // La variable pour l'effet sonore des cartes - le son est bas
     //----------------------//----------------------
-    let userDef = UserDefaultsManager()
+    let userDef = UserDefaultsManager()  // L'appel de la classe qui garde le crédit
     //----------------------//----------------------
     override func viewDidLoad() {
         //---
         super.viewDidLoad()
         //---
-        verifyCredit()
+        verifyCredit() // L'appel de la fonction
         //---
         creditsLabel.text = "CRÉDITS : \(credits)"
         //---
-        createCardObjectsFromImages()
+        createCardObjectsFromImages() // La méthode pour creer les objects a partir des images
         //---
-        fillUpArrays()
+        fillUpArrays() // Ramplir les different tableau
         //---
         prepareAnimations(duration: 0.5,
                           repeating: 5,
@@ -97,17 +102,18 @@ class ViewController: UIViewController {
         stylizeSlotImageViews(radius: 10,
                               borderWidth: 0.5,
                               borderColor: UIColor.black.cgColor,
-                              bgColor: UIColor.yellow.cgColor)
+                              bgColor: UIColor.yellow.cgColor) // Donne une style au slotImageViews
         //---
         stylizeBackgroundViews(radius: 10,
                                borderWidth: nil,
                                borderColor: UIColor.black.cgColor,
-                               bgColor: nil)
+                               bgColor: nil) // Donne une style au background
         //---
-        createDeckOfCards()
+        createDeckOfCards() // L'appel de la fonction
         //---
     }
     //----------------------//----------------------
+    // La fonction
     func createDeckOfCards() {
         deckOfCards = [(Int, String)]()
         for a in 0...3 {
