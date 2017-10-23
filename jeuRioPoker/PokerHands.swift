@@ -1,3 +1,5 @@
+// POKER HANDS ALGORITHMS
+// Classe PokerHands
 class PokerHands {
     //==============================================
     func royalFlush(hand: [(card: Int, suit: String)]) -> Bool {
